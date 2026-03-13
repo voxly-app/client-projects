@@ -1,0 +1,18 @@
+Are you the developer?
+If you're the developer of this website, please read this:
+
+We display this page to prevent abuse.
+You and other visitors will only see this page from a standard web browser once per public IP every 7 days.
+The tunnel password is the public IP of the computer running the localtunnel client (or your vpn's public IP if you're connected to one).
+You'll need to share your tunnel password with your link visitors in order for them to access your content.
+To get your tunnel password, you can either:
+
+If running the localtunnel client on a local computer, visit this link in a web browser on that PC or any other PC on the same network: https://loca.lt/mytunnelpassword
+
+If running the localtunnel client on a remote computer, ssh into the remote computer and run one of the following:
+curl https://loca.lt/mytunnelpassword or wget -q -O - https://loca.lt/mytunnelpassword
+To bypass this page:
+Set a bypass-tunnel-reminder request header with any value
+Or, set and send a custom / non-standard browser User-Agent request header
+Note: it's not possible to fully remove this page for all visitors at this time.
+Webhook, IPN, and other non-browser requests "should" be directly tunnelled to your localhost. If your webhook/ipn provider happens to send requests using a real browser user-agent header, those requests will unfortunately also be blocked / be forced to see this tunnel reminder page. FYI, this page returns a 401 HTTP Status.
