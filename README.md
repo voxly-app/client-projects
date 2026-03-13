@@ -1,4 +1,4 @@
-# Example if doing it from a terminal (don't do this inside the voxly folder!)
+# Example if doing it from a terminal.
 git clone https://github.com/voxly-app/client-projects.git
 cd client-projects
 echo "# Test Project" > README.md
